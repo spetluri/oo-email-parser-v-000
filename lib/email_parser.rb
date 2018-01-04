@@ -12,7 +12,7 @@ class EmailParser
   end
   
   def parse()
-    email_list = @email_addresses.include?(", ") ? @email_addresses.split(", ") : @email_addresses.split(" ")
+    email_list = @email_addresses.split(/,\s|\s/)
     email_list.uniq
   end
   
