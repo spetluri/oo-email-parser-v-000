@@ -11,8 +11,8 @@ class EmailParser
     @email_addresses = emails
   end
   
-  def self.parse(emails)
-    email_list = emails.include?(", ") ? self.emails.split(", ") : emails.split(" ")
+  def self.parse()
+    email_list = @email_addresses.include?(", ") ? @email_addresses.emails.split(",") : @email_addresses.split(" ")
     email_list.uniq
   end
   
